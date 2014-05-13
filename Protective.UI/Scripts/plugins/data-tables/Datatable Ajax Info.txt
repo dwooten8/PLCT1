@@ -1,0 +1,1 @@
+﻿Information about how to implement an ajax datatable can be found at http://www.codeproject.com/Articles/155422/jQuery-DataTables-and-ASP-NET-MVC-Integration-Part

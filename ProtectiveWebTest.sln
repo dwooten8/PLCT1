@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protective.UI", "Protective.UI\Protective.UI.csproj", "{E02EA4F7-ADBE-47A7-AACD-C2210747043A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protective.Core", "Protective.Core\Protective.Core.csproj", "{1D1844C3-8127-4D2F-8357-7EDACF5780D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{EB69ADAC-84F5-4FC3-88A9-621027245A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protective.Core.Tests", "Protective.Core.Tests\Protective.Core.Tests.csproj", "{98FB243E-E765-468E-B468-393BAF302B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protective.DAL", "Protective.DAL\Protective.DAL.csproj", "{382D4DDE-A93A-4CC6-A7D3-698BC6A35D1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{2387BE07-B3D3-4E5E-A49F-FE4D84EF2507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protective.DAL.Test", "Protective.DAL.Test\Protective.DAL.Test.csproj", "{2668D570-ECAA-45DE-AFB8-5E743199307D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7805AC49-B3FE-4AB9-9BDD-49933A793257}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Protective_Test_1.0.0.sql = Scripts\Protective_Test_1.0.0.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E02EA4F7-ADBE-47A7-AACD-C2210747043A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02EA4F7-ADBE-47A7-AACD-C2210747043A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02EA4F7-ADBE-47A7-AACD-C2210747043A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02EA4F7-ADBE-47A7-AACD-C2210747043A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1844C3-8127-4D2F-8357-7EDACF5780D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1844C3-8127-4D2F-8357-7EDACF5780D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1844C3-8127-4D2F-8357-7EDACF5780D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1844C3-8127-4D2F-8357-7EDACF5780D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FB243E-E765-468E-B468-393BAF302B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FB243E-E765-468E-B468-393BAF302B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FB243E-E765-468E-B468-393BAF302B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FB243E-E765-468E-B468-393BAF302B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382D4DDE-A93A-4CC6-A7D3-698BC6A35D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382D4DDE-A93A-4CC6-A7D3-698BC6A35D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382D4DDE-A93A-4CC6-A7D3-698BC6A35D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382D4DDE-A93A-4CC6-A7D3-698BC6A35D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2668D570-ECAA-45DE-AFB8-5E743199307D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2668D570-ECAA-45DE-AFB8-5E743199307D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2668D570-ECAA-45DE-AFB8-5E743199307D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2668D570-ECAA-45DE-AFB8-5E743199307D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98FB243E-E765-468E-B468-393BAF302B9E} = {EB69ADAC-84F5-4FC3-88A9-621027245A70}
+		{2387BE07-B3D3-4E5E-A49F-FE4D84EF2507} = {EB69ADAC-84F5-4FC3-88A9-621027245A70}
+		{2668D570-ECAA-45DE-AFB8-5E743199307D} = {2387BE07-B3D3-4E5E-A49F-FE4D84EF2507}
+	EndGlobalSection
+EndGlobal
