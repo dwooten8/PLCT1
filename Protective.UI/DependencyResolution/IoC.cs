@@ -17,6 +17,7 @@
 
 
 using Microsoft.AspNet.Identity;
+using Protective.Core.Entity;
 using Protective.Core.Entity.Authentication;
 using Protective.Core.Interfaces.Repository;
 using Protective.DAL.Repository;
@@ -36,6 +37,7 @@ namespace Protective.UI.DependencyResolution {
 
                             //Repository Configuration
                             x.For<IAuthenticationRepository>().Use<AuthenticationRepository>().Named("AuthenticationRepository");
+                            x.For<IRepository<Message>>().Use<MessageRepository>().Named("MessageRepository");
 
                             //OWIN implementation
                             x.For<Microsoft.AspNet.Identity.IUserStore<IdentityUser>>().Use<UserStore>();

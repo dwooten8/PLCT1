@@ -7,12 +7,15 @@ This project is a demo project for Protective.  The project should fulfill the p
 
 **Project Setup**
 
-To setup the project you will need to create a database and the needed tables.  The project contains a scripts solution folder.  The folder contains the Protective_Test_1.0.0.sql file.  This file will generate the ProtectiveTest database and the needed tables.  It will also create the needed user roles and administrative account.
+To setup the project you will need to create a database and the needed tables.  The project contains a scripts solution folder.  The folder contains the Protective_Test_1.0.0.sql file.  
+ file will generate the ProtectiveTest database and the needed tables.  It will also create the needed user roles and administrative account.
 
-**Project Dependencies**
+ The application will need to be run as an administrator so that the logging file can be written.  The log file will be created in a logs directory that will be created in the base directory.
 
-The following packages have been used in this project
+Project Dependencies
 --------------
+
+**The following packages have been used in this project**
 
 - bootstrap 3.0.0
 - Dapper 1.23
@@ -21,9 +24,8 @@ The following packages have been used in this project
 - NUnit 2.6.3
 - SturctureMapMVC 4.3.0.2.115
 
-The following JQuery plugins have been used in this project
---------------
+**The following JQuery plugins have been used in this project**
 
 - bootstrap-toastr
-- jquery datatables
-- jquery form
+- JQuery datatables
+- JQuery BlockUI

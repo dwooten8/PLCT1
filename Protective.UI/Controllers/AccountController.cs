@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using NLog;
 using Protective.Core.Encryption;
 using Protective.Core.Entity.Authentication;
 using Protective.UI.Authentication;
@@ -17,6 +18,8 @@ namespace Protective.UI.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private Logger _logger = LogManager.GetLogger("Protective.UI.Account");
+
         public AccountController() : this(new UserManager<IdentityUser>(new UserStore())) { }
 
         public AccountController(UserManager<IdentityUser> userManager)
@@ -49,16 +52,29 @@ namespace Protective.UI.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
+                    _logger.Info(string.Format("User {0} has been logged in to the system.", model.UserName));
                     return RedirectToLocal(returnUrl);
                 }
                 else
                 {
+                    _logger.Error(string.Format("Unable to login user {0}", model.UserName));
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        //
+        // POST: /Account/LogOff
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            _logger.Info(string.Format("User {0} has been logged out of the system.", User.Identity.GetUserName()));            
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Index", "Home");
         }
 
         //
@@ -283,15 +299,7 @@ namespace Protective.UI.Controllers
             return View(model);
         }
 
-        //
-        // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LogOff()
-        {
-            AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
-        }
+        
 
         //
         // GET: /Account/ExternalLoginFailure

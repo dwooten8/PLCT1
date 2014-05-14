@@ -10,11 +10,11 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/
 
 /* styles for validation helpers */
 .field-validation-error {
@@ -39,4 +39,75 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+
+.caption {
+  float: left;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.box {
+   margin-top:50px;
+   display:block;
+   padding: 0px !important;
+   text-align: center;
+   height: 35px;
+}
+
+.grey {  
+   background-color: #9d9c9c !important;
+   border: 1px solid #9d9c9c;
+   border-top: 0;
+}
+
+.red {  
+   background-color: #ef8476 !important;
+   border: 1px solid #ef8476;
+   border-top: 0;
+}
+
+.form-div {
+    margin-top: 20px;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.btn.green {
+    color: white;
+    text-shadow: none;	 
+    background-color: #35aa47;
+}
+
+.btn.green:hover, 
+.btn.green:focus, 
+.btn.green:active, 
+.btn.green.active,
+.btn.green.disabled, 
+.btn.green[disabled]{ 
+    background-color: #1d943b !important;
+    color: #fff !important;
+    outline: none !important;
+}
+
+.wide {
+    width: 940px;
+}
+
+.page-title {
+  padding: 0px;
+  font-size: 30px;
+  letter-spacing: -1px;
+  display: block;
+  color: #666;
+  margin: 0px 0px 15px 0px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
 }

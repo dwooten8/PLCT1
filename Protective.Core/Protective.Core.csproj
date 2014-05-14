@@ -51,7 +51,10 @@
     <Compile Include="Encryption\PasswordEncryptor.cs" />
     <Compile Include="Entity\Authentication\IdentityRole.cs" />
     <Compile Include="Entity\Authentication\IdentityUser.cs" />
+    <Compile Include="Entity\Message.cs" />
     <Compile Include="Interfaces\Repository\IAuthenticationRepository.cs" />
+    <Compile Include="Interfaces\Repository\IReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
