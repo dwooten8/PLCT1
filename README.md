@@ -29,3 +29,7 @@ Project Dependencies
 - bootstrap-toastr
 - JQuery datatables
 - JQuery BlockUI
+
+**The following css plugins have been used in this project**
+
+- font-awesome.css

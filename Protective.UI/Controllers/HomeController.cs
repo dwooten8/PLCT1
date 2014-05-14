@@ -25,7 +25,7 @@ namespace Protective.UI.Controllers
         public ActionResult Index()
         {
             HomeModel model = new HomeModel();
-            model.MessageList = _messageRepository.GetList().OrderByDescending(m => m.AddedDate).ToList();
+            model.MessageList = GetMessageList();
             return View(model);
         }
 
@@ -50,14 +50,48 @@ namespace Protective.UI.Controllers
             }
         }
 
+        [HttpPost]
+        public JsonResult DeleteMessage(int id)
+        {
+            try
+            {
+                bool success = _messageRepository.Delete(new Message() { Id = id });
+                return Json(new {success = success });
 
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                throw;
+            }
+        }
 
+        [HttpPost]
+        public JsonResult SetStar(int id, string isStarred)
+        {
+            try
+            {
+                bool success = _messageRepository.Update(new Message() { Id = id, IsStarred = !Convert.ToBoolean(isStarred) });
+                return Json(new { success = success });
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                throw;
+            }
+        }
 
         private void SetModelError(HomeModel model, string message)
         {
             ModelState.Clear();
             model.Error = message;
             ModelState.AddModelError("Error", model.Error);
+        }
+
+        private List<Message> GetMessageList()
+        {
+            return _messageRepository.GetList().OrderByDescending(m => m.AddedDate).ToList();
         }
     }
 }
